@@ -10,6 +10,7 @@ DROP TABLE IF EXISTS autor;
 CREATE TABLE autor(
     autId        integer   AUTO_INCREMENT  PRIMARY KEY,
     autNombre    varchar(30) NOT NULL,
+	autApellido  varchar(30) NOT NULL,
     autEmail     char(25) NULL,
     autPais   ENUM( 'Argentina' , 'Alemania', 'Colombia', 'Italia', 'Mexico','España', 'Brasil', 'EUA') DEFAULT 'Colombia'
 );
@@ -47,13 +48,13 @@ INSERT  INTO  editorial(ediNombre) VALUES('Planeta');
 INSERT  INTO  editorial(ediNombre) VALUES('Panamericana');
 INSERT  INTO  editorial(ediNombre) VALUES('Penguin Random House');
 
-INSERT  INTO  autor(autNombre) VALUES('Gabriel García Márquez');
-INSERT  INTO  autor(autNombre) VALUES('Rafael Pombo');
-INSERT  INTO  autor(autNombre) VALUES('Jorge Isaacs');
-INSERT  INTO  autor(autNombre) VALUES('José Eustasio Rivera');
-INSERT  INTO  autor(autNombre) VALUES('Gustavo Álvarez Gardeazábal');
-INSERT  INTO  autor(autNombre,autEmail,autPais) VALUES('Paulo Coelho','pcoelho@gmail.com','Brasil');
-INSERT  INTO  autor(autNombre,autEmail) VALUES('Héctor Abad Faciolince','hAbad@gmail.com');
+INSERT  INTO  autor(autNombre, autApellido) VALUES('Gabriel', 'García Márquez');
+INSERT  INTO  autor(autNombre, autApellido) VALUES('Rafael','Pombo');
+INSERT  INTO  autor(autNombre, autApellido) VALUES('Jorge','Isaacs');
+INSERT  INTO  autor(autNombre, autApellido) VALUES('José Eustasio','Rivera');
+INSERT  INTO  autor(autNombre, autApellido) VALUES('Gustavo','Álvarez Gardeazábal');
+INSERT  INTO  autor(autNombre, autApellido,autEmail,autPais) VALUES('Paulo','Coelho','pcoelho@gmail.com','Brasil');
+INSERT  INTO  autor(autNombre, autApellido,autEmail) VALUES('Héctor','Abad Faciolince','hAbad@gmail.com');
 
 INSERT  INTO  libro(libId,libNombre,libPub,ediId,autId,libPrecio) VALUES(1001, 'Cien años de soledad',1967,1,1, 100000);
 INSERT  INTO  libro(libId,libNombre,libPub,ediId,autId,libPrecio) VALUES(1002, 'La Vorágine',1924,2,4, 110000);
