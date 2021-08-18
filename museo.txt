@@ -1,0 +1,64 @@
+group:museo (imported from SQL)
+
+museo = {
+	mus_id:number, mus_nombre:string
+	101    , 'Louvre'         
+	102    , 'Met' 
+	205    , 'Shangai'
+	304    ,'Britanico'
+}
+
+exposicion = {
+	exp_id:number, exp_nombre:string
+	1003 , 'Da Vinci'
+  1004 , 'Renacimiento'
+  1005 , 'Cubismo'
+  1006 , 'Impresionismo'
+}
+
+obra = {
+	obr_id:number, obr_nombre:string, obr_tipo:string, obr_costo:number, exp_id_exp:number
+	111, 'Mona lisa', 'pintura', 1000, 1003
+  112, 'Ultima cena', 'pintura', 800, 1003
+  113, 'Hombre vitruvio', 'boceto', 400, 1003
+  114, 'Planos', 'planos', 200, 1003
+  200, 'Fornarina', 'pintura', 400, 1004
+  201, 'David', 'escultura', 700, 1004
+  202, 'Nacimiento de Venus', 'pintura', 250, 1004
+  300, 'Violin and candless', 'pintura', 300, 1005
+  301, 'Les demoiselles', 'pintura', 350, 1005
+  302, 'Cabeza de mujer', 'escultura', 300, 1005
+  400, 'Autoretrato', 'pintura', 100, 1006
+  401, 'La parade', 'pintura', 300, 1006
+  402, 'Solei levant', 'pintura', 300, 1006
+}
+
+presentacion = {
+	pre_fecha:string, pre_obr_id:number, pre_mus_id:number
+	'Ene-mar-2013', 111, 101
+  'Oct-dic-2013', 111, 101
+  'Ene-mar-2013', 112, 101
+  'May-sept-2013', 200, 101
+  'May-sept-2013', 201, 101
+  'Oct-dic-2013', 113, 101
+  'Ene-jul-2013', 300, 102
+  'Ene-jul-2013', 301, 102
+  'Abr-jun-2013', 113, 102
+  'Sept-2013', 113, 102
+  'Abr-jun-2013', 112, 102
+  'Sept-2013', 112, 102
+  'Ene-abr-2013', 202, 102
+  'Ene-abr-2013', 201, 102
+  'Julio 2013', 113, 205
+  'Julio 2013', 114, 205
+  'Marz-jun-2013', 401, 205
+  'Marz-jun-2013', 402,205
+  'Oct-dic-2013', 301, 205
+  'Oct-dic-2013', 302, 205
+  'Oct-dic-2013', 200, 205
+  'Oct-dic-2013', 202, 205
+  'Ago-nov-2013', 402, 304
+  'Ago-nov-2013', 400, 304
+  'Jul-ago-2013', 114, 304
+  'Jul-ago-2013', 111, 304
+}
